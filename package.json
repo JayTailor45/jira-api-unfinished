@@ -13,7 +13,8 @@
   "author": "Jay Tailor",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^2.21.1",
+    "apollo-server": "^2.21.1",
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
     "mongoose": "5.11.15"

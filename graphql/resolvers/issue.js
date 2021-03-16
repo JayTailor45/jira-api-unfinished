@@ -1,8 +1,15 @@
-const Issue = require("../../schema/issue");
+const Issue = require('../../schema/issue');
 
-const resolvers = {
+module.exports = {
     Query: {
-        issues: () => Issue.find()
+        issues: async () => {
+            try {
+                const issues = await Issue.find();
+                return issues;
+            } catch (error) {
+                throw new Error(error);
+            }
+        },
     },
     Mutation: {
         createIssue: async (_, { title }) => {
@@ -36,6 +43,3 @@ const resolvers = {
         },
     }
 }
-
-
-module.exports = resolvers;
