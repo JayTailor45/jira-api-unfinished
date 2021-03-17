@@ -13,8 +13,8 @@ const startServer = async () => {
 
     await mongoose.connect('mongodb://localhost:27017/jira-clone', { useUnifiedTopology: true, useNewUrlParser: true });
 
-    server.listen().then(url => {
-        console.log(`🚀 Server started at ${url}`);
+    server.listen().then(res => {
+        console.log(`🚀 Server started at ${res.url}`);
     });
 
 }

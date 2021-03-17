@@ -18,12 +18,14 @@ const typeDefs = gql`
         email: String!
         password: String!
         createdAt: String!
+        token: String!
     }
     type Mutation {
         createIssue(title: String!): Issue!
         deleteIssueById(_id: String!): Boolean!
         updateIssue(_id: String!, title: String!): Issue!
         createUser(registerInput: RegisterInput): User!
+        login(email: String!, password: String!): User!
     }
 `
 module.exports = typeDefs;

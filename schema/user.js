@@ -10,6 +10,9 @@ const userSchema = new Schema({
     createdAt: {
         type: String
     },
+    token: {
+        type: String
+    },
 });
 
 module.exports = model('User', userSchema);
