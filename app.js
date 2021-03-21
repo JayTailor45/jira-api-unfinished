@@ -9,6 +9,7 @@ const startServer = async () => {
     const server = new ApolloServer({
         typeDefs,
         resolvers,
+        context: ({ req }) => ({ req }),
     });
 
     await mongoose.connect('mongodb://localhost:27017/jira-clone', { useUnifiedTopology: true, useNewUrlParser: true });

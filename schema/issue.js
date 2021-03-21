@@ -7,7 +7,7 @@ const issueSchema = new Schema({
     ticketKey: {
         type: String
     },
-    craetedBy: {
+    createdBy: {
         type: Schema.Types.ObjectId,
         ref: 'users'
     },
@@ -16,16 +16,19 @@ const issueSchema = new Schema({
         ref: 'users'
     },
     priority: {
-        type: String
+        type: String,
+        default: 'MEDIUM'
     },
     issueType: {
-        type: String
+        type: String,
+        default: 'TASK'
     },
     status: {
-        type: String
+        type: String,
+        default: 'TODO'
     },
     createdAt: {
-        type: String
+        type: String,
     }
 });
 

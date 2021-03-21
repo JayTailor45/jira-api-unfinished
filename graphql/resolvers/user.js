@@ -13,7 +13,8 @@ function generateToken(user) {
 
 module.exports = {
     Query: {
-        users: async () => {
+        users: async (_, args, context) => {
+            const user = checkAuth(context);
             try {
                 const users = await User.find();
                 return users;
